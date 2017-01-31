@@ -39,6 +39,12 @@ class TestReturnRaffle < Minitest::Test
 		winnum = '1234'
 		ticket_num = ['3234', '5555', '6789']
 		assert_equal(['3234'], returning_function(winnum, ticket_num))
-	end
 	
+	end
+		def test_return_array_off1s_extra
+		winnum = '1234'
+		ticket_num = ['3234', '5555', '6789', '2234']
+		assert_equal(['3234', '2234'], returning_function(winnum, ticket_num))
+	end
+
 end			
